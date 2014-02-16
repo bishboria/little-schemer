@@ -1,3 +1,5 @@
+(load "helpers")
+
 (define rember
   (lambda (a l)
     (cond ((null? l) ())
@@ -15,11 +17,6 @@
 ;;
 ;; Use cons to build lists
 
-(define firsts
-  (lambda (l)
-    (cond ((null? l) l)
-	  (else (cons (car (car l))
-		      (firsts (cdr l)))))))
 
 (print (firsts '((apple peach pumpkin)
 		 (plum pear cherry)
@@ -85,13 +82,6 @@
 		      (subst2 new o1 o2 (cdr lat)))))))
 
 (print (subst2 'vanilla 'chococlat 'banana '(banana ice cream with chocolate topping)))
-
-(define multirember
-  (lambda (a lat)
-    (cond ((null? lat) lat)
-	  ((eq? (car lat) a) (multirember a (cdr lat)))
-	  (else (cons (car lat)
-		      (multirember a (cdr lat)))))))
 
 (print (multirember 'cup '(coffee cup tea cup and hick cup)))
 
