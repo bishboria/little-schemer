@@ -52,19 +52,6 @@
 (print (value-v2 '(+ 1 (* 3 4))))
 (print (value-v2 '(+ 1 (expt 3 4))))
 
-
-(define 1st-sub-exp
-  (lambda (aexp)
-    (cadr aexp)))
-
-(define 2nd-sub-exp
-  (lambda (aexp)
-    (caddr aexp)))
-
-(define operator
-  (lambda (aexp)
-    (car aexp)))
-
 (define value-v3
   (lambda (nexp)
     (cond ((atom? nexp) nexp)

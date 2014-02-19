@@ -33,4 +33,17 @@
     (cond ((null? l) l)
 	  (else (cons (car (cdr (car l)))
 		      (seconds (cdr l)))))))
+
+(define 1st-sub-exp
+  (lambda (aexp)
+    (cadr aexp)))
+
+(define 2nd-sub-exp
+  (lambda (aexp)
+    (caddr aexp)))
+
+(define operator
+  (lambda (aexp)
+    (car aexp)))
+
 'helpers-loaded
