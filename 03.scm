@@ -85,27 +85,7 @@
 
 (print (multirember 'cup '(coffee cup tea cup and hick cup)))
 
-(define multiinsertR
-  (lambda (new old lat)
-    (cond ((null? lat) lat)
-	  ((eq? (car lat) old)
-	     (cons old
-		   (cons new
-			 (multiinsertR new old (cdr lat)))))
-	  (else (cons (car lat)
-		      (multiinsertR new old (cdr lat)))))))
-
 (print (multiinsertR 'foo 'bar '(bar baz bar bar)))
-
-(define multiinsertL
-  (lambda (new old lat)
-    (cond ((null? lat) lat)
-	  ((eq? (car lat) old)
-	     (cons new
-		   (cons old
-			 (multiinsertL new old (cdr lat)))))
-	  (else (cons (car lat)
-		      (multiinsertL new old (cdr lat)))))))
 
 (print (multiinsertL 'foo 'bar '(bar baz bar bar)))
 
