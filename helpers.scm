@@ -76,6 +76,10 @@
   (lambda (x)
     (car (cdr x))))
 
+(define third
+  (lambda (x)
+    (car (cdr (cdr x)))))
+
 (define revpair
   (lambda (p)
     (build (second p)
