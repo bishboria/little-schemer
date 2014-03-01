@@ -66,4 +66,23 @@
 	  (else (cons (car lat)
 		      (multiinsertL new old (cdr lat)))))))
 
+(define build
+  (lambda (s1 s2)
+    (cons s1 (cons s2 ()))))
+
+(define first car)
+
+(define second
+  (lambda (x)
+    (car (cdr x))))
+
+(define revpair
+  (lambda (p)
+    (build (second p)
+	   (first p))))
+
+(define one?
+  (lambda (n)
+    (= n 1)))
+
 'helpers-loaded

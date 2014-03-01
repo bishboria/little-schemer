@@ -223,11 +223,6 @@
 
 (print (occur 'a '(b c d a a f b)))
 
-
-(define one?
-  (lambda (n)
-    (= n 1)))
-
 (print (one? 1))
 (print (one? 2))
 

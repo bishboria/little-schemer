@@ -172,11 +172,6 @@
 			     (first (car rel)))
 		      (revrel (cdr rel)))))))
 
-(define revpair
-  (lambda (p)
-    (build (second p)
-	   (first p))))
-
 (define revrel-v2
   (lambda (rel)
     (cond ((null? rel) rel)
